@@ -18,7 +18,8 @@ def create_model(configs):
     base_model = models.vgg16(pretrained=True)
     model = NIMA(base_model)
 
-    if configs.warm_start:
+    if configs.warm_start and os.path.exists(os.path.join(
+            configs.ckpt_path, 'epoch-%d.pkl' % configs.warm_start_epoch)):
         model.load_state_dict(torch.load(os.path.join(
             configs.ckpt_path, 'epoch-%d.pkl' % configs.warm_start_epoch), map_location=configs.device))
         print('Successfully loaded model epoch-%d.pkl' %

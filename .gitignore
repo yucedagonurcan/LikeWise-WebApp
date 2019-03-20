@@ -4,3 +4,4 @@ LikeWiseApp/__pycache__
 .DS_Store
 LikeWiseNodeApp/uploads/*
 LikeWiseApp/LikeWise/test_images/*
+LikeWiseApp/LikeWise/models/*
