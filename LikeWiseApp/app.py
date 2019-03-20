@@ -31,6 +31,8 @@ def getI420FromBase64(codec, image_path="c:\\"):
 @app.route("/predict_images", methods=["POST"])
 def predict_images():
 
+    if not os.path.exists(configs.test_img_path):
+        os.makedirs(configs.test_img_path)
     files = request.get_json()
     for file in files:
         getI420FromBase64(file["base64"], os.path.join(

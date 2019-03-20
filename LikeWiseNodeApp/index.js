@@ -14,6 +14,11 @@ app.set("view engine", "ejs");
 // Tell express to serve files from the directories
 app.use(express.static("public"));
 app.use("/uploads", express.static("uploads"));
+
+if (!fs.existsSync(path.join(__dirname, "uploads/"))) {
+  fs.mkdirSync(path.join(__dirname, "uploads/"));
+}
+
 var photos = null;
 // index route
 app.get("/", function(req, res) {

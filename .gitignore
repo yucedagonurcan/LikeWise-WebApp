@@ -1,5 +1,7 @@
 LikeWiseNodeApp/node_modules
-LikeWiseApp/LikeWise/models/epoch-12.pkl
 LikeWiseApp/LikeWise/__pycache__
 LikeWiseApp/__pycache__
 .DS_Store
+LikeWiseNodeApp/uploads
+LikeWiseApp/LikeWise/test_images/*
+LikeWiseApp/LikeWise/models/*
