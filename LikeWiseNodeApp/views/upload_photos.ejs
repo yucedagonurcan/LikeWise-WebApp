@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include partials/header.ejs %>
+
+  <body>
+    <div class="container">
+      <br /><br />
+      <div class="row">
+        <div class="col-12">
+          <div id="uploadedPhotos" class="row">
+            <% if ( uploaded_photos !== null) { %> <%
+            uploaded_photos.forEach((element, ind) => { %>
+            <div
+              id="img-<%= ind %>"
+              class="col-4 mb-3  shadow container-fluid img-cell"
+            >
+              <div>
+                <img
+                  class="img-thumbnail img-fluid mb-2 col-12 "
+                  src="<%= element.relativePath %>"
+                  alt="<%= element.filename %>"
+                />
+                <div
+                  class="img-scores row ml-0 mr-0 p-1 overlay align-items-center col-12"
+                >
+                  <label
+                    class=" text-center col-12 mb-1 font-weight-lighter text-white"
+                    for="<%= element.filename %>"
+                    >Aesthetic Score:
+
+                    <div
+                      class="badge badge-primary text-wrap font-weight-lighter ml-1 p-2"
+                    >
+                      <%= element.mean_pred%>
+                    </div>
+                  </label>
+                  <label
+                    class=" text-center col-12 mb-1 font-weight-lighter text-white"
+                    for="<%= element.filename %>"
+                  >
+                    Unconventionality :
+
+                    <div
+                      class="badge badge-info text-wrap font-weight-lighter ml-1 p-2"
+                    >
+                      <%= element.std_pred%>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <figcaption
+                class="figure-caption font-weight-lighter mb-2 col-12 "
+              >
+                <small><%= element.filename %></small>
+              </figcaption>
+            </div>
+            <% }) %> <% } %>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+      <a class="row btn btn-info fixed-bottom col-2 ml-2 mb-2" id="back-button" href="/">
+        <i class="fas fa-chevron-left"></i> Go Back
+      </a>
+      <%- include partials/footer.ejs %>
+    </div>
+  </body>
+</html>

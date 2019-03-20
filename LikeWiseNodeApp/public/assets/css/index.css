@@ -1,0 +1,71 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e9ecef;
+}
+#logo-text {
+  transition: all 0.5s ease;
+}
+#logo-text:hover {
+  font-size: 35px;
+}
+.img-cell {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.spinner-grow {
+  display: none;
+}
+.img-cell:hover {
+  opacity: 0.8;
+}
+.landing-pic {
+  transition: transform 1s ease-in-out;
+}
+.landing-pic:hover {
+  transform: rotate(-10deg);
+}
+
+.img-cell:hover .img-thumbnail {
+  -webkit-filter: blur(2px) sepia(1);
+  filter: blur(2px) sepia(1);
+}
+.img-cell:hover .figure-caption {
+  opacity: 0;
+}
+.figure-caption {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+.landing-pic {
+  max-width: 100%;
+  height: 500px;
+  width: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #008bbacc;
+}
+
+.img-cell:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}

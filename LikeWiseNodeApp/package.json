@@ -1,0 +1,23 @@
+{
+  "name": "likewisenodeapp",
+  "version": "1.0.0",
+  "description": "Node.js Application for communication to LikeWise API on Flask",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Onur Can",
+  "license": "ISC",
+  "dependencies": {
+    "base64-img": "^1.0.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "file-type": "^10.9.0",
+    "form-data": "^2.3.3",
+    "formidable": "^1.2.1",
+    "nodemon": "^1.18.10",
+    "read-chunk": "^3.1.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}
